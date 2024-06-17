@@ -4,7 +4,7 @@ import avatar from '../assets/profile.png'
 import styles from '../styles/Username.module.css';
 import { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
-import { passwordValidate } from '../helper/validate';
+import { registerValidation } from '../helper/validate';
 import convetToBase64 from '../helper/convert';
 
 
@@ -16,9 +16,9 @@ export default function Register() {
         initialValues : {
             email:'doyol56239@cnogs.com',
             username: 'example@123',
-            password : 'ADMIN@123'
+            password : 'Admin@123'
         },
-        validate: passwordValidate,
+        validate: registerValidation,
         validateOnBlur: false,
         validateOnChange: false,
         onSubmit : async values => {
